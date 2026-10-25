@@ -4,7 +4,4 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   site: 'https://vruizfp-png.github.io',
   base: '/tueste-norte-astro',
-  build: {
-    format: 'directory'
-  }
 });
