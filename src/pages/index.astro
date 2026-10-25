@@ -8,7 +8,7 @@ import Layout from '../layouts/Layout.astro';
       Bienvenido a Tueste Norte
     </h1>
 
-    <img src="/img/cafe2.jpg" alt="Taza de café Tueste Norte" class="img-large" />
+    <img src={`${import.meta.env.BASE_URL}/img/cafe2.jpg`} alt="Taza de café Tueste Norte" class="img-large" />
 
     <p class="section-text">
       En Tueste Norte elaboramos café artesanal. Seleccionamos cada grano con cuidado,
@@ -21,8 +21,8 @@ import Layout from '../layouts/Layout.astro';
     <h2 style="text-align:center; margin-bottom:1.5rem;">Nuestros Cafés</h2>
 
     <div class="center">
-      <img src="/img/cafe1.jpg" alt="Granos de café" class="img-small" />
-      <img src="/img/cafe3.jpg" alt="Máquina de espresso" class="img-small" />
+      <img src={`${import.meta.env.BASE_URL}/img/cafe1.jpg`} alt="Granos de café" class="img-small" />
+      <img src={`${import.meta.env.BASE_URL}/img/cafe3.jpg`} alt="Máquina de espresso" class="img-small" />
     </div>
 
     <p class="section-text" style="margin-top:2rem;">
@@ -34,7 +34,7 @@ import Layout from '../layouts/Layout.astro';
   <section style="margin-top:3rem;">
     <h2 style="text-align:center; margin-bottom:1.5rem;">Conócenos</h2>
 
-    <img src="/img/quienes-somos.jpg" alt="Equipo Tueste Norte" class="img-large" />
+    <img src={`${import.meta.env.BASE_URL}/img/quienes-somos.jpg`} alt="Equipo Tueste Norte" class="img-large" />
 
     <p class="section-text">
       Somos un equipo comprometido con la calidad y la sostenibilidad. Trabajamos juntos para
