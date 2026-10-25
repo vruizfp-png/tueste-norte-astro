@@ -1,71 +1,25 @@
 ---
-const { title = "Tueste Norte" } = Astro.props;
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const { titulo } = Astro.props;
 ---
 
-<!doctype html>
 <html lang="es">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <title>{title}</title>
-
-    <link rel="icon" href={`${base}/favicon.ico`} />
-    <link rel="stylesheet" href={`${base}/styles/global.css`}>
-
-    <style>
-      body {
-        margin: 0;
-        font-family: system-ui, sans-serif;
-        background: #f5f1ee;
-        color: #3a2f2a;
-      }
-
-      header {
-        background: #6b4f3f;
-        padding: 1rem 0;
-      }
-
-      .nav {
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-      }
-
-      .nav-link {
-        color: white;
-        text-decoration: none;
-        font-size: 1.2rem;
-        font-weight: 500;
-      }
-
-      .nav-link:hover {
-        text-decoration: underline;
-      }
-
-      main {
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 2rem;
-      }
-
-      footer {
-        text-align: center;
-        padding: 1rem;
-        margin-top: 3rem;
-        font-size: 0.9rem;
-        color: #6b4f3f;
-      }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{titulo} - Tueste Norte</title>
+    <link rel="stylesheet" href="/styles.css" />
   </head>
 
-  <body>
-    <header>
-      <nav class="nav">
-        <a href={`${base}/`} class="nav-link">Inicio</a>
-        <a href={`${base}/productos`} class="nav-link">Productos</a>
-        <a href={`${base}/quienes-somos`} class="nav-link">Quiénes Somos</a>
+  <body class="bg-stone-100 text-stone-800 max-w-3xl mx-auto py-10 px-4">
+    <header class="mb-10">
+      <h1 class="text-4xl font-bold mb-4 text-center">Tueste Norte</h1>
+
+      <nav class="flex justify-center space-x-6 text-lg">
+        <a href="/" class="text-amber-700 hover:underline">Inicio</a>
+        <a href="/productos" class="text-amber-700 hover:underline">Productos</a>
+        <a href="/quienes-somos" class="text-amber-700 hover:underline">Quiénes somos</a>
+        <a href="/avisos" class="text-amber-700 hover:underline">Avisos</a>
+        <a href="/contacto" class="text-amber-700 hover:underline">Contacto</a>
       </nav>
     </header>
 
@@ -73,6 +27,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       <slot />
     </main>
 
-    <footer>© 2026 Tueste Norte — Café artesanal</footer>
+    <footer class="mt-10 text-center text-sm text-stone-500 border-t pt-6">
+      © 2026 Tueste Norte
+    </footer>
   </body>
 </html>
