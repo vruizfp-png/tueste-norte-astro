@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout titulo="Página no encontrada">
+  <section class="text-center py-12">
+    <h1 class="text-4xl font-bold mb-4">Página no encontrada</h1>
+    <p class="text-lg mb-6">
+      Lo sentimos, la página que estás buscando no existe o ha cambiado de dirección.
+    </p>
+    <a 
+      href={`${import.meta.env.BASE_URL}`} 
+      class="inline-block bg-amber-700 text-white px-6 py-2 rounded hover:bg-amber-800 transition"
+    >
+      Volver al Inicio
+    </a>
+  </section>
+</BaseLayout>
