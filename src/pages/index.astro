@@ -1,11 +1,45 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Inicio | Tueste Norte">
+  <section>
+    <h1 style="text-align:center; margin-bottom:1.5rem;">
+      Bienvenido a Tueste Norte
+    </h1>
+
+    <img src="/img/cafe2.jpg" alt="Taza de café Tueste Norte" class="img-large" />
+
+    <p class="section-text">
+      En Tueste Norte elaboramos café artesanal. Seleccionamos cada grano con cuidado,
+      tostamos con precisión y servimos con pasión. Nuestro objetivo es ofrecer una experiencia
+      que una aroma, sabor y tradición en cada taza.
+    </p>
+  </section>
+
+  <section style="margin-top:3rem;">
+    <h2 style="text-align:center; margin-bottom:1.5rem;">Nuestros Cafés</h2>
+
+    <div class="center">
+      <img src="/img/cafe1.jpg" alt="Granos de café" class="img-small" />
+      <img src="/img/cafe3.jpg" alt="Máquina de espresso" class="img-small" />
+    </div>
+
+    <p class="section-text" style="margin-top:2rem;">
+      Desde los granos recién tostados hasta el espresso perfecto, cuidamos cada detalle para que
+      disfrutes de un café auténtico, equilibrado y lleno de carácter.
+    </p>
+  </section>
+
+  <section style="margin-top:3rem;">
+    <h2 style="text-align:center; margin-bottom:1.5rem;">Conócenos</h2>
+
+    <img src="/img/quienes-somos.jpg" alt="Equipo Tueste Norte" class="img-large" />
+
+    <p class="section-text">
+      Somos un equipo comprometido con la calidad y la sostenibilidad. Trabajamos juntos para
+      ofrecerte un café que respete el origen, apoye a los productores y llegue a tu taza con
+      el máximo sabor.
+    </p>
+  </section>
 </Layout>

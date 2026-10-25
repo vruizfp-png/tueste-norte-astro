@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const avisos = (await getCollection('avisos')).sort(
+  (a, b) => new Date(b.data.fecha) - new Date(a.data.fecha)
+);
+---
+
+<BaseLayout titulo="Avisos">
+  <h1 class="text-3xl font-bold mb-6">Avisos</h1>
+
+  {avisos.map((aviso) => (
+    <div class="aviso">
+      <h2>{aviso.data.titulo}</h2>
+      <p class="text-sm text-stone-500">{aviso.data.fecha}</p>
+      <p>{aviso.body}</p>
+
+      {aviso.data.destacado && (
+        <span class="destacado">Destacado</span>
+      )}
+    </div>
+  ))}
+</BaseLayout>

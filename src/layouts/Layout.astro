@@ -1,23 +1,77 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+---
+const { title = "Tueste Norte" } = Astro.props;
+---
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>{title}</title>
+
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles/global.css">
+
+    <style>
+      body {
+        margin: 0;
+        font-family: system-ui, sans-serif;
+        background: #f5f1ee;
+        color: #3a2f2a;
+      }
+
+      header {
+        background: #6b4f3f;
+        padding: 1rem 0;
+      }
+
+      .nav {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+      }
+
+      .nav-link {
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+
+      .nav-link:hover {
+        text-decoration: underline;
+      }
+
+      main {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      footer {
+        text-align: center;
+        padding: 1rem;
+        margin-top: 3rem;
+        font-size: 0.9rem;
+        color: #6b4f3f;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav class="nav">
+        <a href="/" class="nav-link">Inicio</a>
+        <a href="/productos" class="nav-link">Productos</a>
+        <a href="/quienes-somos" class="nav-link">Quiénes Somos</a>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer>© 2026 Tueste Norte — Café artesanal</footer>
+  </body>
+</html>
