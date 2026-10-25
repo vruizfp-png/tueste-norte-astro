@@ -1,12 +1,13 @@
 ---
 const { titulo } = Astro.props;
+const base = import.meta.env.BASE_URL;
 ---
 
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <title>{titulo} - Tueste Norte</title>
-    <link rel="stylesheet" href={`${import.meta.env.BASE_URL}/styles.css`} />
+    <link rel="stylesheet" href={`${base}/styles.css`} />
   </head>
 
   <body class="bg-stone-100 text-stone-800 max-w-3xl mx-auto py-10">
@@ -14,10 +15,11 @@ const { titulo } = Astro.props;
       <h1 class="text-4xl font-bold mb-4">Tueste Norte</h1>
 
       <nav class="space-x-4 text-lg">
-        <a href={`${import.meta.env.BASE_URL}/`} class="text-amber-700 hover:underline">Inicio</a>
-        <a href={`${import.meta.env.BASE_URL}/quienes-somos`} class="text-amber-700 hover:underline">Quiénes somos</a>
-        <a href={`${import.meta.env.BASE_URL}/avisos`} class="text-amber-700 hover:underline">Avisos</a>
-        <a href={`${import.meta.env.BASE_URL}/contacto`} class="text-amber-700 hover:underline">Contacto</a>
+        <a href={`${base}`} class="text-amber-700 hover:underline">Inicio</a>
+        <a href={`${base}/productos`} class="text-amber-700 hover:underline">Productos</a>
+        <a href={`${base}/quienes-somos`} class="text-amber-700 hover:underline">Quiénes somos</a>
+        <a href={`${base}/avisos`} class="text-amber-700 hover:underline">Avisos</a>
+        <a href={`${base}/contacto`} class="text-amber-700 hover:underline">Contacto</a>
       </nav>
     </header>
 
