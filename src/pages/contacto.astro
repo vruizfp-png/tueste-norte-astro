@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout titulo="Contacto">
@@ -22,6 +23,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <p>
     Para avisos importantes como cambios de horario o nuevas variedades, consulta la sección de
-    <a href="/avisos" class="text-amber-700 underline">Avisos</a>.
+    <a href={`${base}/avisos`} class="text-amber-700 underline">Avisos</a>.
   </p>
 </BaseLayout>
