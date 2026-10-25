@@ -1,5 +1,6 @@
 ---
 const { title = "Tueste Norte" } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <!doctype html>
@@ -10,8 +11,8 @@ const { title = "Tueste Norte" } = Astro.props;
 
     <title>{title}</title>
 
-    <link rel="icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="icon" href={`${base}/favicon.ico`} />
+    <link rel="stylesheet" href={`${base}/styles/global.css`}>
 
     <style>
       body {
@@ -62,9 +63,9 @@ const { title = "Tueste Norte" } = Astro.props;
   <body>
     <header>
       <nav class="nav">
-        <a href="/" class="nav-link">Inicio</a>
-        <a href="/productos" class="nav-link">Productos</a>
-        <a href="/quienes-somos" class="nav-link">Quiénes Somos</a>
+        <a href={`${base}/`} class="nav-link">Inicio</a>
+        <a href={`${base}/productos`} class="nav-link">Productos</a>
+        <a href={`${base}/quienes-somos`} class="nav-link">Quiénes Somos</a>
       </nav>
     </header>
 
